@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        <Navbar />
         <div class="container-fluid contact_us" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
             <div class="row">
                 <div class="container">
@@ -69,7 +69,13 @@
 
 <script>
 import 'element-ui/lib/theme-chalk/index.css';
+import Navbar from "@/components/Navbars.vue"
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 export default {
+    components : {
+    Navbar, ElementUI
+  },
     data(){
         return{
             counter : 0,

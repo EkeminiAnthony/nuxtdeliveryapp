@@ -21,16 +21,7 @@
           </ul>
           <form>
             <li class="nav-item btn_nav">
-              <div class="dropdown">
-                    <button class="btn btn-dark dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      get started
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <nuxt-link to="/signIn" class="dropdown-item">Sign Up</nuxt-link>
-                      <nuxt-link to ="/login" class="dropdown-item" >Log In</nuxt-link>
-                      
-                    </div>
-                  </div>              
+                <nuxt-link to="/login" class="dropdown-item"><button class="btn btn-dark">Log Out</button></nuxt-link>  
             </li>
           </form>
         </div>

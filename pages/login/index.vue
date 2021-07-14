@@ -1,5 +1,6 @@
 <template>
     <div class="container-fluid ">
+        <Navbar />
         <div class="container margin_top">
             <div class="card shadow rounded"  data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
             <div class="card-body">
@@ -32,10 +33,12 @@
 
 <script>
 import firebase from 'firebase'
-
+import Navbar from "@/components/Navbar.vue"
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 export default {
     components:{
-        firebase
+        firebase, Navbar, ElementUI
     },
     data(){
         return{
@@ -59,6 +62,10 @@ export default {
                 .then((userCredential) => {
                     // Signed in
                     var user = userCredential.user;
+                     this.$message({
+                        message: 'Login successful!',
+                        type: 'success'
+                        });
                     console.log(user)
                     this.$router.push('/delivery');
                     // ...
@@ -83,6 +90,7 @@ export default {
 .card{
     width: 30%;
     margin-left: 25rem;
+    margin-bottom: 7rem;
 }
 .margin_top{
     margin-top: 13rem !important;

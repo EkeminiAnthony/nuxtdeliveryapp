@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Navbar />
         <div class="container-fluid back" style="background-image : linear-gradient(to right, hsl(229, 31%, 21%), rgba(116, 112, 112, 0.767)), url(/img/hero/newHero.jpeg); background-repeat: no-repeat; background-size: cover;">
              <div class="container">
                 <div class="row">
@@ -59,6 +60,25 @@
             </div>
         </div>   
         </div>
+
+        <div class="container about_margin" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" id="about">
+            <div class="row">
+                <div class="col-lg-7 col-sm-6 col-md-6">
+                    <div class="about">about our company</div>
+                    <div class="about_text">safe logistic & delivery solutions that saves your time!</div>
+                    <p class="about_word">Logistic express presents you with a convenient and comfortable service, we ensure all information about your goods are well documented and we ensure 
+                        a very solid communication between our agents and customers.</p>
+                      <p class="about_word">  What makes us different is our ability to deliver your service without delay and also enable you track the delivering process of your package
+                    </p>
+                    <!-- <div class="btn_center">
+                    <div class="btn btn-dark">get started</div>
+                    </div> -->
+                </div>
+                 <div class="col-lg-5 col-sm-6 col-md-6 pic_margin">
+                        <div class="img_agent img-fluid"></div>                     
+                </div>
+            </div>
+        </div>
         <div class="container-fluid mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" id="service">
             <div class="container">
                 <div class="our_service">our services</div>
@@ -91,24 +111,7 @@
                 
             </div>
         </div>
-        <div class="container about_margin" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom" id="about">
-            <div class="row">
-                <div class="col-lg-7 col-sm-6 col-md-6">
-                    <div class="about">about our company</div>
-                    <div class="about_text">safe logistic & delivery solutions that saves your time!</div>
-                    <p class="about_word">Logistic express presents you with a convenient and comfortable service, we ensure all information about your goods are well documented and we ensure 
-                        a very solid communication between our agents and customers.</p>
-                      <p class="about_word">  What makes us different is our ability to deliver your service without delay and also enable you track the delivering process of your package
-                    </p>
-                    <!-- <div class="btn_center">
-                    <div class="btn btn-dark">get started</div>
-                    </div> -->
-                </div>
-                 <div class="col-lg-5 col-sm-6 col-md-6 pic_margin">
-                        <div class="img_agent img-fluid"></div>                     
-                </div>
-            </div>
-        </div>
+        
         <!-- <div class="container-fluid contact_us" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
             <div class="row">
                 <div class="container">
@@ -183,27 +186,27 @@
                     <div class="card agent_card ">
                         <img class="card-img-top img-fluid" src="/img/hero/agent1.png" alt="Card image cap">
                         <div class="card-body agent_card1">
-                        <h5 class="card-title">Jerry Melinda</h5>
+                        <h5 class="card-title">Anthony Edem</h5>
                         <p class="card-text">Head Delivery Department</p>
                         </div>
                     </div>
                     <div class="card">
                         <img class="card-img-top img-fluid" src="/img/hero/agent2.jpeg" alt="Card image cap">
                         <div class="card-body agent_card2">
-                        <h5 class="card-title">Leo Edward</h5>
+                        <h5 class="card-title">Christopher Ben</h5>
                         <p class="card-text">Head Luggages Transfer</p>
                         </div>
                         </div>
                     <div class="card">
                         <img class="card-img-top img-fluid" src="/img/hero/agent4.png" alt="Card image cap">
                         <div class="card-body agent_card3">
-                        <h5 class="card-title">Berlin Costa</h5>
+                        <h5 class="card-title">Akpan Sunday</h5>
                         <p class="card-text">Head Pick Up Department</p>
                         </div>
                     </div>
          </div>
         </div>  
-        <div class="container-fluid  client_bg" data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+        <div class="container-fluid  client_bg" data-aos="fade-down" data-aos-duration="500" data-aos-anchor-placement="center-bottom">
             <div class="container client_body">
                 <div class="row">
                     <div class="col-lg-6 col-sm-6 col-md-6 mt-5">
@@ -217,26 +220,26 @@
                                 </p>
                                         <div class="row">
                                                 <div class="col-sm-2 col-md-3 col-lg-2">
-                                                   <img src="/img/comment/comment_1.png" alt="" srcset="">
+                                                   <img src="/img/ceo/h.jpg" alt="" srcset="" class="ceo">
                                                 </div>
                                                 <div class="col mt-3 col-md col-lg" style="color : white">
-                                                    Edin Hooks <br />
-                                                    CEO Lead Whole 
+                                                Mr Hanson Johnson<br />
+                                                    CEO Start Innovation Hub.
                                                 </div>
                                         </div>   
                                 </div>
                                 <div class="each_client" id="client-hide"> 
-                                    <p>"As an enterprenure i love travelling without stress and want to feel relax,
+                                    <p>"As an enterprenure I love travelling without stress and want to feel relax,
                                         Logistic Express gave me a reason to always do that, I recommend such a company with
                                         an awesome track record to every enterprenure out there."
                                 </p>
                                         <div class="row">
                                                 <div class="col-sm-2 col-md-3 col-lg-2">
-                                                   <img src="/img/comment/comment_2.png" alt="" srcset="">
+                                                   <img src="/img/ceo/k.jpg" alt="" srcset="" class="ceo">
                                                 </div>
                                                 <div class="col mt-3 col-md col-lg" style="color : white">
-                                                    Barry Allen <br />
-                                                    Enterprenure 
+                                                    Miss Ekemini Anthony <br />
+                                                    Longrich Distributor
                                                 </div>
                                         </div>   
                                 </div>
@@ -247,17 +250,17 @@
                                 </p>
                                         <div class="row">
                                                 <div class="col-sm-2 col-md-3 col-lg-2">
-                                                   <img src="/img/comment/comment_3.png" alt="" srcset="">
+                                                   <img src="/img/ceo/e.jpg" alt="" srcset="" class="ceo">
                                                 </div>
                                                 <div class="col mt-3 col-md col-lg" style="color : white">
-                                                    Phil Gerrad <br />
+                                                    Mrs Ekaette Paul <br />
                                                     Business Consultant 
                                                 </div>
                                         </div>   
                                 </div>
                                 </div>
                                  <div class="btn_margin">
-                                            <button type="submit" class="btn btn-outline-dark btn1 btn-sm" @click="prevBtn" :disabled="prevDisabled">
+                                            <button type="submit" class="btn btn-outline-dark btn1 btn-sm ml-5" @click="prevBtn" :disabled="prevDisabled">
                                                 <i style="font-size : 2rem" class="fa fa-angle-left"></i>
                                             </button>
                                             <button type="submit" class="btn btn-outline-dark btn1 btn-sm ml-3" @click="nextBtn" :disabled="isDisabled">
@@ -266,16 +269,10 @@
                                 </div>
                             
                     </div>
-                    <!-- <div class="col-lg-6 col-sm-6 col-md-6">
+                    <div class="col-lg-6 col-sm-6 col-md-6 bike">
 
-                        <div class="card shadow card_width">
-                            <h1 class="email_notification">Subscribe to receive email notification</h1>
-                        <center>
-                            <input type="text" class="form-control reduce" name="" id="" placeholder="Enter Email Address">
-                          <div class="btn btn-primary mt-3">Subscribe</div>
-                        </center>
-                        </div>
-                  </div>  -->
+                       
+                  </div> 
                 </div>
                 </div>
             </div>
@@ -283,8 +280,11 @@
 </template>
 
 <script>
-
+import Navbar from "@/components/Navbar.vue"
 export default {
+     components : {
+    Navbar,
+  },
     data(){
         return{
             counter : 0,
@@ -325,9 +325,11 @@ export default {
 }
 .back{
     /* background: linear-gradient(to right, hsl(229, 31%, 21%), rgba(116, 112, 112, 0.767)); */
-    height: 550px !important;
+    height: 400px !important;
+    
     /* margin-top: 13vh; */
 }
+
 .header{
     font-size: 5rem;
     text-transform:capitalize ;
@@ -367,10 +369,10 @@ export default {
 }
 .wrapper_icon{
     background-color:  rgba(248, 248, 248, 0.767);
-    height: 200px;
+    height: 100px;
 }
 .container_icon{
-    margin-top: 3rem;
+    margin-top: 0.5rem;
 }
 .icon_head{
     margin-top: .7rem;
@@ -581,6 +583,10 @@ input[type="time"]:before {
 }
 #client-hide{
     display : none
+}
+.ceo{
+    width: 5rem;
+    border-radius: 50%;
 }
 .btn-outline-dark {
     color: white !important;

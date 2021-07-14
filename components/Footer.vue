@@ -61,7 +61,7 @@
 
 <style scoped>
 .footer{
-    margin-top: 10rem;
+    
     background-color: black;
     padding-bottom: 2rem;
 }
