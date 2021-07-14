@@ -21,7 +21,7 @@
           </ul>
           <form>
             <li class="nav-item btn_nav">
-                <nuxt-link to="/login" class="dropdown-item"><button class="btn btn-dark">Log Out</button></nuxt-link>  
+                <nuxt-link to="/login" ><button class="btn btn-dark">Log Out</button></nuxt-link>  
             </li>
           </form>
         </div>

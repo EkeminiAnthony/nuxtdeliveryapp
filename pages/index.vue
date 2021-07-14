@@ -244,7 +244,7 @@
                                         </div>   
                                 </div>
                                 <div class="each_client" id="client-hide"> 
-                                    <p>"Due to my busy schedules and appointments, i use logistic express to run errands while i 
+                                    <p>"Due to my busy schedules and appointments, I use logistic express to run errands while I 
                                         focus on my day-to-day activities, I recommend such a company with
                                         an awesome track record to everyone out there."
                                 </p>
