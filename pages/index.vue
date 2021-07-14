@@ -250,11 +250,11 @@
                                 </p>
                                         <div class="row">
                                                 <div class="col-sm-2 col-md-3 col-lg-2">
-                                                   <img src="/img/ceo/e.jpg" alt="" srcset="" class="ceo">
+                                                   <img src="/img/ceo/j.jpg" alt="" srcset="" class="ceo">
                                                 </div>
                                                 <div class="col mt-3 col-md col-lg" style="color : white">
-                                                    Mrs Ekaette Paul <br />
-                                                    Business Consultant 
+                                                     Miss Enobong Uwem<br />
+                                                    Food Vendor 
                                                 </div>
                                         </div>   
                                 </div>
