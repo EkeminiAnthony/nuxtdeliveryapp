@@ -1,20 +1,31 @@
 <template>
     <div>
         <Navbar />
-        <div class="container-fluid contact_us" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+        <div class="container-fluid contact_us" >
             <div class="row">
                 <div class="container">
                 <div class="card contact_card">
                 <div class="card-body">
                     <div class="try_us">Ready to try us?</div>
                     <div class="try_us2"> Request for a free delivery</div>
-                    <p>We understand the challenges facing delivery and logistic, but we at Logistic express, we ensure safe and efficient 
-                        delivery of every package. </p>
-                       <p>That why we offer a free trail of our service to every first customers.</p> 
+                    <p>We understand the challenges facing delivery and logistic, but we at Kemzy Logistics, we ensure safe and efficient 
+                        delivery of every package.</p><p>That why we offer a free trail of our service to every first customers.</p> 
                  <form method="post" @submit.prevent="deliver">
                     <div class="form-row">
                         <div class="col">
-                        <input type="text" class="form-control" required placeholder="Name" v-model="deliveryorder.name">
+                        <input type="text" class="form-control" required placeholder="First Name" v-model="deliveryorder.firstname">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" required placeholder="Last Name" v-model="deliveryorder.lastname">
+                        </div>
+                      
+                    </div>
+                    <div class="form-row  mt-3 ">
+                        <div class="col">
+                        <input type="text" class="form-control" required placeholder="Phone Number" v-model="deliveryorder.phonenumber">
+                        </div>
+                        <div class="col">
+                            <input type="email" class="form-control" required placeholder="Email" v-model="deliveryorder.email">
                         </div>
                       
                     </div>
@@ -40,16 +51,16 @@
                             </div>
                         </div>
                         <div class="col">
-                        <input type="text" class="form-control" placeholder="Weight (kg)" required v-model="deliveryorder.weight">
+                        <input type="text" class="form-control" placeholder="Order Description " required v-model="deliveryorder.description">
                         </div>
                     </div>
                     
                      <div class="form-row mt-3">
                         <div class="col">
-                        <input type="date" class="form-control" required v-model="deliveryorder.date" placeholder="Expected Date of Delivery">
+                        <input type="date" class="form-control" required v-model="deliveryorder.date" placeholder="Date of Delivery">
                         </div>
                         <div class="col">
-                        <input type="time" class="form-control" required v-model="deliveryorder.time" placeholder="Expected Time of Delivery">
+                        <input type="time" class="form-control" required v-model="deliveryorder.time" placeholder="Time of Delivery">
                        
                         </div>
                     </div>
@@ -64,17 +75,17 @@
         </div>
          
         
-                </div>     
+         </div>     
 </template>
 
 <script>
 import 'element-ui/lib/theme-chalk/index.css';
 import Navbar from "@/components/Navbars.vue"
-import ElementUI from 'element-ui';
+import ElementUI from 'element-ui';import Swal from 'sweetalert2';
 import 'element-ui/lib/theme-chalk/index.css';
 export default {
     components : {
-    Navbar, ElementUI
+    Navbar, ElementUI,Swal
   },
     data(){
         return{
@@ -82,12 +93,14 @@ export default {
             isDisabled : false,
             prevDisabled : true,
             deliveryorder:{
-                name:'',
-            
+                firstname:'',
+                lastname:'',
+                email :'',
+                phonenumber:'',
                 pickup:'',
                 dropoff:'',
                 type:'',
-                weight:'',
+                description :'',
                 date:'',
                 time:''
             },
@@ -115,31 +128,56 @@ export default {
             this.$refs.show.children[this.counter].classList.add("active")
            }
         },
-        async deliver() {
-      try {
-        this.$axios.post('https://nuxtjs-delivery-app-default-rtdb.firebaseio.com/freedelivery.json',this.deliveryorder,{
-          headers:{
-            'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': '*',
-          }
-        }).then((res)=>{
-            this.recieved =res
-            this.$message({
-            message: "Order successful",
-            type: "success",
-            });
-          console.log(this.recieved)
-          this.deliveryorder={}
+        deliver(){
+            if(confirm("Send Delivery?")){
+                this.$axios.post('https://nuxtjs-delivery-app-default-rtdb.firebaseio.com/freedelivery.json',this.deliveryorder).then(()=>{
+                    this.deliveryorder={}
+                    this.$message({
+                    message: "Order successful",
+                    type: "success",
+                    });
+                    this.recieved =res
+                    console.log(this.recieved)
+                    
+                })
+                
+            }
+        },
+        // deliver(){
+        //     Swal.fire({
+        //         title: 'Send delivery order?',
+            
+        //         icon: 'warning',
+        //         showCancelButton: true,
+        //         confirmButtonColor: '#3085d6',
+        //         cancelButtonColor: '#d33',
+        //         confirmButtonText: 'Yes, send it!'
+        //         }).then((result) => {
+        //         if (result.isConfirmed) {
+        //              this.$axios.post('https://nuxtjs-delivery-app-default-rtdb.firebaseio.com/freedelivery.json',this.deliveryorder).then((res)=>{
+        //     this.recieved =res
+        //     this.$message({
+        //     message: "Order successful",
+        //     type: "success",
+        //     });
+        //   console.log(this.recieved)
+        //   this.deliveryorder={}
           
-        })
-      } catch (err) {
-           this.$message({
-            message: "There was a problem sending your order. Please check and try again.",
-            type: "warning",
-            });
-        console.log(err)
-      }
-    },
+        // })
+        //         }
+        //         })
+        // },
+    //     async deliver() {
+    //   try {
+       
+    //   } catch (err) {
+    //        this.$message({
+    //         message: "There was a problem sending your order. Please check and try again.",
+    //         type: "warning",
+    //         });
+    //     console.log(err)
+    //   }
+    // },
         
     }
 }

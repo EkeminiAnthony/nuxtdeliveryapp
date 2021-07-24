@@ -1,6 +1,42 @@
 <template>
     <div class="container-fluid container_bg col fixed-top">
-       <div class="container nav_padding">
+      <div class="container nav_padding">
+      <nav class="navbar navbar-expand-lg navbar-light mt-2">
+        <nuxt-link to ="/" class="navbar-brand"><img src="~/assets/logos.png" width="200px" alt="" srcset=""></nuxt-link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto line_down">
+            <li class="nav-item active">
+              <nuxt-link to ="/" class="nav-link">home <span class="sr-only">(current)</span></nuxt-link>
+            </li>
+            <li class="nav-item">
+              <nuxt-link to="#about" class="nav-link" >about</nuxt-link>
+            </li>
+            <li class="nav-item">
+              <nuxt-link to="#service" class="nav-link">services</nuxt-link>
+            </li>
+          </ul>
+          <form>
+            <li class="nav-item btn_nav">
+              <div class="dropdown">
+                    <button class="btn btn-dark dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      get started
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <nuxt-link to ="/login" class="dropdown-item" >Log In</nuxt-link>
+                      <nuxt-link to="/signIn" class="dropdown-item">Sign Up</nuxt-link>
+                    </div>
+                  </div>              
+            </li>
+          </form>
+        </div>
+      </nav>
+      </div>
+
+      <!-- <div class="container nav_padding">
       <nav class="navbar navbar-expand-lg navbar-light mt-2">
         <nuxt-link to ="/" class="navbar-brand"><img src="img/logo/logo.png" alt="" srcset=""></nuxt-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +71,7 @@
           </form>
         </div>
       </nav>
-      </div>
+      </div> -->
     </div>
     
 </template>

@@ -67,6 +67,7 @@ export default {
  
   modules: [
     '@nuxtjs/font-awesome',
+    'nuxt-sweetalert2',
     '@nuxtjs/axios',
     [
       '@nuxtjs/firebase',

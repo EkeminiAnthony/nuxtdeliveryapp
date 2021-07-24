@@ -6,7 +6,7 @@
                             <h2 class="footer-text">We Understand The Importance Approaching Each Delivery</h2>
                         </div>
                         <div class="col-sm-6">
-                           <h2 class="footer-text2"> +234 (81) 3211 9011</h2>
+                           <h2 class="footer-text2"> (+234)81 2306 7606</h2>
                         </div>
                     </div>
                     <hr>
@@ -24,10 +24,9 @@
                         <div class="col-sm-3">
                             <div class="list-name">OPEN HOUR</div>
                             <ul>
-                                <li>Monday 11am-7pm</li>
-                                <li>Tuesday-Friday 11am-8pm</li>
-                                <li>Saturday 10am-6pm</li>
-                                <li>Sunday 11am-6pm</li>
+                                <li>Monday-Friday 8am-6pm</li>
+                                <li>Saturday 8am-4pm</li>
+                                <li>Sunday 12am-6pm</li>
                             </ul>
                         </div>
                         <div class="col-sm-3">
@@ -40,7 +39,7 @@
                             </ul>
                         </div>
                         <div class="col-sm-3">
-                            <div class="list-name"><img src="/img/logo/logo2_footer.png" alt="" srcset=""></div>
+                            <div class="list-name"><img src="~/assets/logos.png" width="200px" alt="" srcset=""></div>
                             <ul>
                                 <li>We are here to serve you and make you feel relaxed and happy while we run errands for you.</li>
                                 <li>

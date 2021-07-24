@@ -5,7 +5,7 @@
              <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class = "header">safe & reliable <span style="color : #f15f22"> logistic</span> solution!</div>
+                        <div class = "header">safe & reliable <span style="color : #f15f22"> logistic</span> solutions!</div>
                         <!-- <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="YOUR TRACKING ID" aria-label="Recipient's username" aria-describedby="basic-addon2">
                         <div class="input-group-append">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-sm">
                             <div class="icon_head">call us anytime</div>
-                            <div class="icon_text">+234 (0) 81023 90122</div>
+                            <div class="icon_text">(+234) 81 2306 7606</div>
                         </div>
                     </div>  
                     </div>
@@ -40,8 +40,7 @@
                                  <span class="font_edit"><i class="fa fa-clock-o"></i></span>
                             </div>
                             <div class="col-sm">
-                                <div class="icon_head">sunday closed</div>
-                                <div class="icon_text">sun - sat 8.00-18.00</div>
+                                <div class="icon_text">Mon-Sun 8.00am-18.00pm</div>
                         </div>
                     </div>       
                 </div>
@@ -51,8 +50,8 @@
                              <span class="font_edit"><i class="fa fa-map-marker"></i></span>
                         </div>
                         <div class="col-sm">
-                            <div class="icon_head">oron Road 25011</div>
-                            <div class="icon_text">akwa ibom state, Uyo </div>
+                            <div class="icon_head">NO.2 Akpan Essien Lane B</div>
+                            <div class="icon_text">Uyo, Akwa Ibom State</div>
                         </div>
                     </div>
                            
@@ -66,7 +65,7 @@
                 <div class="col-lg-7 col-sm-6 col-md-6">
                     <div class="about">about our company</div>
                     <div class="about_text">safe logistic & delivery solutions that saves your time!</div>
-                    <p class="about_word">Logistic express presents you with a convenient and comfortable service, we ensure all information about your goods are well documented and we ensure 
+                    <p class="about_word">Kemzy Logistics presents you with a convenient and comfortable service, we ensure all information about your goods are well documented and we ensure 
                         a very solid communication between our agents and customers.</p>
                       <p class="about_word">  What makes us different is our ability to deliver your service without delay and also enable you track the delivering process of your package
                     </p>
@@ -184,21 +183,21 @@
             <div class="service_text">We ensure safe delivery to your destination</div>
             <div class="card-deck mt-5">
                     <div class="card agent_card ">
-                        <img class="card-img-top img-fluid" src="/img/hero/agent1.png" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="/img/team/s.jpg" alt="Card image cap">
                         <div class="card-body agent_card1">
                         <h5 class="card-title">Anthony Edem</h5>
                         <p class="card-text">Head Delivery Department</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top img-fluid" src="/img/hero/agent2.jpeg" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="/img/team/pm.jpg" alt="Card image cap">
                         <div class="card-body agent_card2">
                         <h5 class="card-title">Christopher Ben</h5>
                         <p class="card-text">Head Luggages Transfer</p>
                         </div>
                         </div>
                     <div class="card">
-                        <img class="card-img-top img-fluid" src="/img/hero/agent4.png" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="/img/team/ko.jpg" alt="Card image cap">
                         <div class="card-body agent_card3">
                         <h5 class="card-title">Akpan Sunday</h5>
                         <p class="card-text">Head Pick Up Department</p>
@@ -214,7 +213,7 @@
                             <div class="client_text">what our clients say!</div>
                             <div class="testimony" ref="show">
                                <div class="each_client active" id="client-hide"> 
-                                   <p>"Logistic Express gave me an advantage over others in delivering of
+                                   <p>"Kemzy Logistics gave me an advantage over others in delivering of
                                     goods to my clients faster and timely, I recommend such a company with
                                     an awesome track record to every enterprenurer out there."
                                 </p>
@@ -230,7 +229,7 @@
                                 </div>
                                 <div class="each_client" id="client-hide"> 
                                     <p>"As an enterprenure I love travelling without stress and want to feel relax,
-                                        Logistic Express gave me a reason to always do that, I recommend such a company with
+                                        Kemzy Logistics gave me a reason to always do that, I recommend such a company with
                                         an awesome track record to every enterprenure out there."
                                 </p>
                                         <div class="row">
@@ -244,7 +243,7 @@
                                         </div>   
                                 </div>
                                 <div class="each_client" id="client-hide"> 
-                                    <p>"Due to my busy schedules and appointments, I use logistic express to run errands while I 
+                                    <p>"Due to my busy schedules and appointments, I use Kemzy logistics to run errands while I 
                                         focus on my day-to-day activities, I recommend such a company with
                                         an awesome track record to everyone out there."
                                 </p>
@@ -307,7 +306,7 @@ export default {
                 this.prevDisabled = true
              }
            else{
-               this.isDisabled = false
+            this.isDisabled = false
             this.$refs.show.children[this.counter].classList.remove("active");
             this.counter--;
             this.$refs.show.children[this.counter].classList.add("active")
@@ -397,6 +396,9 @@ export default {
     font-weight: 500;
     text-transform: capitalize;
 }
+.card-img-top{
+    height:95%;
+}
 .service_text{
     text-align: center;
     font-size: 3rem;
@@ -452,8 +454,9 @@ p{
     margin-top: 4rem;
 }
 .img_agent{
-    content: url("/img/hero/delivery-man.png");
+    content: url("/img/hero/box.jpg");
     height: 450px;
+    widows: 30px;
 }
 .btn-dark {
     color: white;
