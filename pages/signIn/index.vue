@@ -2,7 +2,7 @@
     <div class="container-fluid ">
         <Navbar />
         <div class="container margin_top">
-            <div class="card shadow"  data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+            <div class="card shadow" >
             <div class="card-body">
                 <form @submit.prevent="signup">
                     <h5 class="modal-title" id="exampleModalLabel">SIGN UP</h5>
@@ -25,7 +25,10 @@
                         
                     </div>
                     <div class="mt-3">
-                        <button type="submit" class="btn btn-primary">SIGN UP</button>
+                        <button type="submit" class="btn btn-primary">
+                            <span v-if="notloading">SIGN UP</span>
+                            <div v-else><loader/></div>
+                        </button>
                     </div>
                  
                  </form>
@@ -38,19 +41,20 @@
 <script>
 import firebase from 'firebase'
 import Navbar from "@/components/Navbar.vue"
+import loader from "@/components/loader.vue"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 export default {
     components:{
-        firebase, Navbar, ElementUI
+        firebase, Navbar, ElementUI,loader
     },
     data(){
         return{
           auth:{
-            
             email:'',
             password:''
-          } 
+          },
+          notloading:true,
             
         }
     },
@@ -62,6 +66,7 @@ export default {
     methods: {
         
         signup(){
+            this.notloading = false;
             firebase.auth().createUserWithEmailAndPassword(this.auth.email, this.auth.password)
                 .then((userCredential) => {
                     // Signed in
@@ -70,6 +75,7 @@ export default {
                         message: 'Signup successful!',
                         type: 'success'
                         });
+                        this.notloading = true;
                     console.log(user)
                     this.$router.push('/delivery');
                     // ...
@@ -79,6 +85,7 @@ export default {
                     var errorMessage = error.message;
                     console.log(errorCode)
                     alert(errorMessage)
+                    this.notloading = true;
                 });
         }
         

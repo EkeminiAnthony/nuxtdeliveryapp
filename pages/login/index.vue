@@ -23,7 +23,10 @@
                             <label class="form-check-label" for="exampleCheck1">Remember me</label>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">LOG IN</button>
+                       <button type="submit" class="btn btn-primary">
+                            <span v-if="notloading">LOG IN</span>
+                            <div v-else><loader/></div>
+                        </button>
         </form>
             </div>
             </div>
@@ -36,9 +39,10 @@ import firebase from 'firebase'
 import Navbar from "@/components/Navbar.vue"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import loader from "@/components/loader.vue"
 export default {
     components:{
-        firebase, Navbar, ElementUI
+        firebase, Navbar, ElementUI,loader
     },
     data(){
         return{
@@ -46,7 +50,8 @@ export default {
             
             email:'',
             password:''
-          } 
+          }, 
+          notloading:true,
             
         }
     },
@@ -58,6 +63,7 @@ export default {
     methods: {
         
         login(){
+            this.notloading = false;
             firebase.auth().signInWithEmailAndPassword(this.auth.email, this.auth.password)
                 .then((userCredential) => {
                     // Signed in
@@ -66,6 +72,7 @@ export default {
                         message: 'Login successful!',
                         type: 'success'
                         });
+                        this.notloading = true;
                     console.log(user)
                     this.$router.push('/delivery');
                     // ...
@@ -73,6 +80,7 @@ export default {
                 .catch((error) => {
                     var errorCode = error.code;
                     var errorMessage = error.message;
+                    this.notloading = true;
                     console.log(errorCode)
                     console.log(errorMessage)
                 });

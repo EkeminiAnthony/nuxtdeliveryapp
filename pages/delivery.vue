@@ -7,7 +7,7 @@
                 <div class="card contact_card">
                 <div class="card-body">
                     <div class="try_us">Ready to try us?</div>
-                    <div class="try_us2"> Request for a free delivery</div>
+                    <div class="try_us2"> Request for a delivery</div>
                     <p>We understand the challenges facing delivery and logistic, but we at Kemzy Logistics, we ensure safe and efficient 
                         delivery of every package.</p><p>That why we offer a free trail of our service to every first customers.</p> 
                  <form method="post" @submit.prevent="deliver">
