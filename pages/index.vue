@@ -454,7 +454,7 @@ p{
     margin-top: 4rem;
 }
 .img_agent{
-    content: url("/img/ceo/box.jpg");
+    content: url("/img/hero/box.jpg");
     height: 450px;
     widows: 30px;
 }
