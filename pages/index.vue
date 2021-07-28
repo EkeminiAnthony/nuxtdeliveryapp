@@ -761,7 +761,7 @@ p{
     margin-left: 1rem;
 }
 .img_agent{
-    content: url("/img/hero/delivery-man.png");
+    content: url("/img/hero/box.jpg");
     height: 400px;
     text-align: center;
 }
@@ -983,7 +983,7 @@ p{
     margin-top: 10rem;
 }
 .img_agent{
-    content: url("/img/hero/delivery-man.png");
+    content: url("/img/hero/box.jpg");
     height: 400px;
     text-align: center;
 }
